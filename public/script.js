@@ -23,7 +23,8 @@ const user = prompt("Enter your name");
 
 var peer = new Peer(undefined, {
   path: "/peerjs",
-  host: "/",
+  secure: "true",
+  host: "https://burberryvideocall.herokuapp.com/",
   port: "443",
 });
 
@@ -66,8 +67,8 @@ const addVideoStream = (video, stream) => {
   video.srcObject = stream;
   video.addEventListener("loadedmetadata", () => {
     video.play();
-    videoGrid.append(video);
   });
+  videoGrid.append(video);
 };
 
 let text = document.querySelector("#chat_message");
