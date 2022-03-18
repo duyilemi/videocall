@@ -1,4 +1,4 @@
-const socket = io("https://burberryvideocall.herokuapp.com/");
+const socket = io("https://burberryvideocall.herokuapp.com");
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const showChat = document.querySelector("#showChat");
